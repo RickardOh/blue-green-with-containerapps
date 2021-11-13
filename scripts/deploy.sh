@@ -17,7 +17,7 @@ LAGGY="true" # if true the backend will cause random delays
 BUGGY="false" # if true the backend will randomly generate 500 errors
 
 # infrastructure deployment properties
-DEPLOYMENT_NAME="dzca12cgithub" # here enter unique deployment name (ideally short and with letters for global uniqueness)
+DEPLOYMENT_NAME="$1" # here enter unique deployment name (ideally short and with letters for global uniqueness)
 VERSION="$2" # version tag showing up in app
 REGISTRY="$3"
 
