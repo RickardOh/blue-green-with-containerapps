@@ -44,9 +44,8 @@ jobs:
 
     - name: Push image
       run: |
-        ME=${{ github.repository_owner }}
-        ME=ME.
-        BACKEND_IMAGE_ID=ghcr.io/${{ github.repository_owner.lowercase }}/container-apps/$BACKEND_APP_NAME
+        ME=${{ github.repository_owner }}.lowercase
+        BACKEND_IMAGE_ID=ghcr.io/$ME/container-apps/$BACKEND_APP_NAME
         docker tag $BACKEND_APP_NAME $BACKEND_IMAGE_ID:${GITHUB_RUN_ID}
         docker push $BACKEND_IMAGE_ID:${GITHUB_RUN_ID}
 
