@@ -17,17 +17,17 @@ LAGGY="true" # if true the backend will cause random delays
 BUGGY="false" # if true the backend will randomly generate 500 errors
 
 # infrastructure deployment properties
-DEPLOYMENT_NAME="$1" # here enter unique deployment name (ideally short and with letters for global uniqueness)
+DEPLOYMENT_NAME="dzca12cgithub" # here enter unique deployment name (ideally short and with letters for global uniqueness)
 VERSION="$2" # version tag showing up in app
 REGISTRY="$3"
 
 SUBSCRIPTION_ID=$(az account show --query id -o tsv) 
 AZURE_CORE_ONLY_SHOW_ERRORS="True"
 CONTAINERAPPS_ENVIRONMENT_NAME="env-$DEPLOYMENT_NAME" # Name of the ContainerApp Environment
-REDIS_NAME="rds-env-$DEPLOYMENT_NAME"
+REDIS_NAME="rdso3h-env-$DEPLOYMENT_NAME"
 RESOURCE_GROUP=$DEPLOYMENT_NAME # here enter the resources group
-CONTAINERAPPS_LOCATION="Central US EUAP"
-AI_INSTRUMENTATION_KEY=""
+CONTAINERAPPS_LOCATION="Canada Central"
+AI_INSTRUMENTATION_KEY="b692931f-047b-4acb-b19f-377894b1712d"
 
 az containerapp env list -g $RESOURCE_GROUP --query "[?contains(name, '$CONTAINERAPPS_ENVIRONMENT_NAME')].id" -o tsv
 
