@@ -44,12 +44,12 @@ jobs:
 
     - name: Push image
       run: |
-        ME=${{ ${{github.repository_owner}}.lowercase }}
-        BACKEND_IMAGE_ID=ghcr.io/$ME/container-apps/$BACKEND_APP_NAME
+    
+        BACKEND_IMAGE_ID=ghcr.io/rickardoh/container-apps/$BACKEND_APP_NAME
         docker tag $BACKEND_APP_NAME $BACKEND_IMAGE_ID:${GITHUB_RUN_ID}
         docker push $BACKEND_IMAGE_ID:${GITHUB_RUN_ID}
 
-        FRONTEND_IMAGE_ID=ghcr.io/${{ github.repository_owner.lowecase }}.toLowerCase()/container-apps/$FRONTEND_APP_NAME
+        FRONTEND_IMAGE_ID=ghcr.io/rickardoh/container-apps/$FRONTEND_APP_NAME
         docker tag $FRONTEND_APP_NAME $FRONTEND_IMAGE_ID:${GITHUB_RUN_ID}
         docker push $FRONTEND_IMAGE_ID:${GITHUB_RUN_ID}
 
