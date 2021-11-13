@@ -1,7 +1,7 @@
 param environmentName string
 param logAnalyticsWorkspaceName string = 'logs-${environmentName}'
 param appInsightsName string = 'appins-${environmentName}'
-param redisName string = 'rds-${environmentName}'
+param redisName string = 'rdso3h-${environmentName}'
 param location string = resourceGroup().location
 
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2020-08-01' = {
